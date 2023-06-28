@@ -34,11 +34,7 @@ The challenge was to build a QR code component and make it look as close to the 
 
 My approach was to create clean, modern, minimalist, and easy-to-understand code. I focused on structuring the HTML semantically and used CSS to style the QR code component to match the provided design. I also made the component responsive to ensure it looks good on different devices and screen sizes.
 
-## Features
 
-- Generates a QR code based on the provided text or URL
-- Responsive design
-- Clean and modern UI
 
 ## Running the Project
 
@@ -52,8 +48,6 @@ To run the project locally, you can follow these steps:
 
 - HTML5
 - CSS3
-- JavaScript
-
 ## Contact
 
-Created by [blogos47](https://github.com/blogos47) - feel free to contact me!
+Created by [blogos47](https://twitter.com/blogos47) - feel free to contact me!
