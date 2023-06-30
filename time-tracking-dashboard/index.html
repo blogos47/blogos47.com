@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+
+  <title>Frontend Mentor | QR code component</title>
+
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .center-div {
+      /* width: 700px; */
+      height: 345px;
+    }
+  </style>
+  <style>
+    body {
+      background-color: #0D1323;
+      text-align: center;
+      font-family: 'Rubik', sans-serif;
+      color: white;
+    }
+
+    .center-div {
+      
+      background-color: #0D1323;
+      padding: 10px;
+      border-radius: 10px;
+    }
+    .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .grid-item {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    text-align: left;
+    width: 150px;
+  }
+  .flex-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .flex-item {
+    border: 1px solid black;
+    padding: 20px;
+    margin: 10px;
+  }
+  .report {
+    font-weight: 700;
+    text-align: left;
+    width: 100px;
+  }
+  .for {
+    font-size: 10px;
+  }
+  .clock {
+    font-size: 30px;
+    font-weight: 700;
+  }
+  .points {
+    float: right;
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .icon-ellipsis {
+    width: 10px;
+  }
+  </style>
+</head>
+<body>
+  <div class="center-div">
+
+    <div class="flex-container">
+      <div class="flex-item report">
+        <span class="for">Report for</span>
+        <span class="name">Jeremy Robson</span>
+        <br>
+        <br>
+        <br>
+        <!-- haz un listado con Daily
+        Weekly
+        Monthly -->
+
+      <ul style="list-style-type: none;">
+        <li>Daily</li>
+        <li>Weekly</li>
+        <li>Monthly</li>
+        <!-- <img src="./images/icon-exercise.svg" alt="">
+        <img src="./images/icon-play.svg" alt="" srcset="">
+        <img src="./images/icon-self-care.svg" alt="" srcset="">
+        <img src="./images/icon-social.svg" alt="" srcset="">
+        <img src="./images/icon-study.svg" alt="" srcset="">
+        <img src="./images/icon-work.svg" alt="" srcset=""> -->
+
+      </ul>
+      </div>
+      <div class="flex-item">
+        <div class="grid-container">
+          <div class="grid-item">Work
+            <span class="points">
+              <img src="./images/icon-ellipsis.svg" class="icon-ellipsis" alt="">
+            </span>
+            <div class="clock"> 23hrs</div>
+              Last Week - 36hrs
+          </div>
+          <div class="grid-item">Play
+            <span class="points">
+              <img src="./images/icon-ellipsis.svg" class="icon-ellipsis" alt="">
+            </span>
+            <div class="clock"> 10hrs</div>
+              Last Week - 8hrs
+          </div>
+          <div class="grid-item">Study
+            <span class="points">
+              <img src="./images/icon-ellipsis.svg" class="icon-ellipsis" alt="">
+            </span>
+            <div class="clock"> 10hrs</div>
+              Last Week - 7hrs
+          </div>
+          <div class="grid-item">Exercise
+            <span class="points">
+              <img src="./images/icon-ellipsis.svg" class="icon-ellipsis" alt="">
+            </span>
+            <div class="clock"> 4hrs</div>
+              Last Week - 5hrs
+          </div>
+          <div class="grid-item">Social
+            <span class="points">
+              <img src="./images/icon-ellipsis.svg" class="icon-ellipsis" alt="">
+            </span>
+            <div class="clock"> 4hrs</div>
+              Last Week - 5hrs
+          </div>
+          <div class="grid-item">Self Care
+            <span class="points">
+              <img src="./images/icon-ellipsis.svg" class="icon-ellipsis" alt="">
+            </span>
+            <div class="clock"> 2hrs</div>
+              Last Week - 2hrs
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div> 
+</body>
+</html>
+<!-- # Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Blue: hsl(246, 80%, 60%)
+
+- Light red (work): hsl(15, 100%, 70%)
+- Soft blue (play): hsl(195, 74%, 62%)
+- Light red (study): hsl(348, 100%, 68%)
+- Lime green (exercise): hsl(145, 58%, 55%)
+- Violet (social): hsl(264, 64%, 52%)
+- Soft orange (self care): hsl(43, 84%, 65%)
+
+### Neutral
+
+- Very dark blue: hsl(226, 43%, 10%)
+- Dark blue: hsl(235, 46%, 20%)
+- Desaturated blue: hsl(235, 45%, 61%)
+- Pale Blue: hsl(236, 100%, 87%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 18px (card titles e.g. Work, Play)
+
+### Font
+
+- Family: [Rubik](https://fonts.google.com/specimen/Rubik)
+- Weights: 300, 400, 500 -->
