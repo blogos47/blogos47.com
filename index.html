@@ -1,29 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blogos47.com</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.css"></head>
-    <style>
-        body {
-            background-color: #0D1323;
-            text-align: center;
-            font-family: 'Rubik', sans-serif;
-            color: white;
-        }
-        .social-networks a  {
-            margin: 0 10px;
-        }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
 
-    </style>
-<body>
-    <div class="social-networks">
-        <a href="https://twitter.com/blogos47"><img src="https://img.icons8.com/fluent/48/000000/twitter.png"/></a>
-        <a href="https://instagram.com/blogos47"><img src="https://img.icons8.com/fluent/48/000000/instagram-new.png"/></a>
-        <a href="https://tiktok.com/@blogos47"><img src="https://img.icons8.com/fluent/48/000000/tiktok.png"/></a>
-        <a href="https://youtube.com/blogos47"><img src="https://img.icons8.com/fluent/48/000000/youtube-play.png"/></a>
-        <a href="https://github.com/blogos47"><img src="https://img.icons8.com/fluent/48/000000/github.png"/></a>
+    <title>Blogos47.com</title>
+  </head>
+  <body class="bg-black text-white pl-10">
+    <h1 class="text-4xl font-bold underline p-4 text-center">
+      Blogos47's blog
+    </h1>
+    <div class="flex flex-row m-10">
+      <a href="https://twitter.com/blogos47">
+        <img src="https://img.icons8.com/fluent/48/000000/twitter.png"
+      /></a>
+      <a href="https://instagram.com/blogos47">
+        <img src="https://img.icons8.com/fluent/48/000000/instagram-new.png"
+      /></a>
+      <a href="https://tiktok.com/@blogos47">
+        <img src="https://img.icons8.com/fluent/48/000000/tiktok.png"
+      /></a>
+      <a href="https://youtube.com/blogos47"
+        ><img src="https://img.icons8.com/fluent/48/000000/youtube-play.png"
+      /></a>
+      <a href="https://github.com/blogos47"
+        ><img src="https://img.icons8.com/fluent/48/000000/github.png"
+      /></a>
     </div>
-</body>
+        <h2 class="text-3xl py-5">Instalando Djando en Windows Subsystem for Linux, Ubuntu</h2>
+        
+        <pre class="text-left">
+            # Navegar a la ubicación de la carpeta deseada
+            cd ~/ruta/delproyecto
+
+            # Crear un entorno virtual
+            python3 -m venv venv
+
+            # Activar el entorno virtual
+            source myenv/bin/activate
+
+            # Instalar Django si no está instalado
+            pip install django
+
+            # Crear los archivos de configuración del proyecto
+            django-admin startproject myproject .
+
+            # Realizar las configuraciones necesarias en settings.py
+
+            # Ejecutar las migraciones iniciales
+            python3 manage.py migrate
+
+            # Crear un superusuario
+            python3 manage.py createsuperuser
+
+            # Iniciar el servidor de desarrollo de Django
+            python3 manage.py runserver
+        </pre>
+    </div>
+  </body>
 </html>
