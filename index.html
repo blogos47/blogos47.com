@@ -6,72 +6,122 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
     <title>Blogos47.com</title>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              customGray: "#171719",
+            },
+          },
+        },
+      };
+    </script>
   </head>
-  <body class="
-  bg-gradient-to-b from-black via-neutral-950
-  to-indigo-950 h-screen
-
-  text-white pl-10 font-sans">
-    <header class="flex flex-col">
-        <div>
-            <h1 class="
-             text-4xl font-bold underline pt-6
-              text-center">
-            Blogos47's blog
-            </h1>
-            <h2 class="text-2xl text-center pb-6">Coding, and more</h2>
-        </div>
-        <div class="flex flex-row m-10">
-            <a href="https://twitter.com/blogos47">
-                <img src="https://img.icons8.com/fluent/48/000000/twitter.png" />
-            </a>
-            <a href="https://instagram.com/blogos47">
-                <img src="https://img.icons8.com/fluent/48/000000/instagram-new.png" />
-            </a>
-            <a href="https://tiktok.com/@blogos47">
-                <img src="https://img.icons8.com/fluent/48/000000/tiktok.png" />
-            </a>
-            <a href="https://youtube.com/blogos47">
-                <img src="https://img.icons8.com/fluent/48/000000/youtube-play.png" />
-            </a>
-            <a href="https://github.com/blogos47">
-                <img src="https://img.icons8.com/fluent/48/000000/github.png"/>
-            </a>
-        </div>
+  <body
+    class="bg-gradient-to-b from-black via-neutral-950 to-indigo-950 h-auto text-white font-sans"
+  >
+    <header class="flex flex-col bg-customGray rounded-xl m-10">
+      <div>
+        <h1 class="text-3xl font-bold underline pt-6 text-center">
+          Blogos47's blog
+        </h1>
+        <h2 class="text-xl text-center pb-6">Coding, and more</h2>
+      </div>
+      <div class="flex flex-row m-10 justify-center items-center [&>a]:w-5">
+        <a href="https://twitter.com/blogos47">
+          <img src="https://img.icons8.com/fluent/48/000000/twitter.png" />
+        </a>
+        <a href="https://instagram.com/blogos47">
+          <img
+            src="https://img.icons8.com/fluent/48/000000/instagram-new.png"
+          />
+        </a>
+        <a href="https://tiktok.com/@blogos47">
+          <img src="https://img.icons8.com/fluent/48/000000/tiktok.png" />
+        </a>
+        <a href="https://youtube.com/blogos47">
+          <img src="https://img.icons8.com/fluent/48/000000/youtube-play.png" />
+        </a>
+        <a href="https://github.com/blogos47">
+          <img src="https://img.icons8.com/fluent/48/000000/github.png" />
+        </a>
+      </div>
     </header>
+    <main class="flex flex-col">
+      <article class="flex flex-col">
+        <h2 class="text-3xl text-center py-5 bg-customGray rounded-xl mx-10">
+          Instalando Django en Windows Subsystem for Linux, Ubuntu
+        </h2>
+        <date class="text-center text-white bg-customGray rounded-xl mx-10 my-5"
+          >2023-14-10</date
+        >
 
-        <h2 class="text-3xl py-5">Instalando Django en Windows Subsystem for Linux, Ubuntu</h2>
-        <date class="text-center text-white">2023-10-10</date>
+        <div>
+          <button
+            id="copyButton"
+            class="relative float-right top-8 right-10 bg-customGray hover:bg-indigo-950 text-white font-bold py-2 px-4 rounded"
+            onclick="copyToClipboard()"
+          >
+            Copy
+          </button>
+          <pre class="text-left overflow-x-auto">
+                    <code id="codeBlock">
+                    # Navegar a la ubicación de la carpeta deseada
+                    cd ~/ruta/delproyecto
 
-        <pre class="text-left">
+                    # Crear un entorno virtual
+                    python3 -m venv venv
 
-            # Navegar a la ubicación de la carpeta deseada
-            cd ~/ruta/delproyecto
+                    # Activar el entorno virtual
+                    source myenv/bin/activate
 
-            # Crear un entorno virtual
-            python3 -m venv venv
+                    # Instalar Django si no está instalado
+                    pip install django
 
-            # Activar el entorno virtual
-            source myenv/bin/activate
+                    # Crear los archivos de configuración del proyecto
+                    django-admin startproject myproject .
 
-            # Instalar Django si no está instalado
-            pip install django
+                    # Realizar las configuraciones necesarias en settings.py
 
-            # Crear los archivos de configuración del proyecto
-            django-admin startproject myproject .
+                    # Ejecutar las migraciones iniciales
+                    python3 manage.py migrate
 
-            # Realizar las configuraciones necesarias en settings.py
+                    # Crear un superusuario
+                    python3 manage.py createsuperuser
 
-            # Ejecutar las migraciones iniciales
-            python3 manage.py migrate
+                    # Iniciar el servidor de desarrollo de Django
+                    python3 manage.py runserver
+                    </code>
+                </pre>
+        </div>
+      </article>
+    </main>
 
-            # Crear un superusuario
-            python3 manage.py createsuperuser
+    <script>
+      function copyToClipboard() {
+        // Obtén el texto del bloque de código
+        var codeToCopy = document.getElementById("codeBlock").innerText;
 
-            # Iniciar el servidor de desarrollo de Django
-            python3 manage.py runserver
+        // Crea un elemento temporal de entrada de texto
+        var tempInput = document.createElement("textarea");
+        tempInput.value = codeToCopy;
+        document.body.appendChild(tempInput);
 
-        </pre>
-    </div>
+        // Selecciona el texto
+        tempInput.select();
+
+        // Copia el texto al portapapeles
+        document.execCommand("copy");
+
+        // Elimina el elemento de entrada de texto temporal
+        document.body.removeChild(tempInput);
+
+        // Cambia el texto del botón
+        document.getElementById("copyButton").innerText = "Copied";
+      }
+    </script>
+
+    <!-- ... el resto de tu código HTML ... -->
   </body>
 </html>
