@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-      href="https://cdn.jsdelivr.net/npm/daisyui@3.2.1/dist/full.css"
       rel="stylesheet"
-      type="text/css"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
     />
+
     <script src="https://cdn.tailwindcss.com"></script>
 
     <title>Blogos47.com</title>
@@ -23,8 +23,13 @@
       };
     </script>
     <style>
-      :root {
-        background-color: transparent;
+      html {
+        scroll-behavior: smooth;
+        font-family: "Roboto", sans-serif;
+        /* Crea una variable con el color primario */
+        --primary: #4805ff;
+        --secondary: #14132b;
+        --accent: #9e2958;
       }
       .text-wrap-balanced {
         text-wrap: balance;
@@ -32,18 +37,59 @@
     </style>
   </head>
   <body
-    class="h-auto text-white font-sans bg-gradient-to-b from-black via-neutral-950 to-indigo-950"
+    class="text-white font-sans bg-gradient-to-b from-black via-neutral-950 to-indigo-950 flex flex-col justify-center items-center"
   >
-    <div class="mx-20">
-      <header class="flex flex-col bg-customGray rounded-xl my-10 -p-2">
+    <ul
+      class="bg-gray-1 md:border-gray-6 md:dark:border-graydark-6 dark:bg-graydark-1 flex flex-col text-sm md:flex-row md:items-center md:rounded-xl md:border"
+    >
+      <li>
+        <a
+          class="text-gray-11 dark:text-graydark-11 dark:hover:text-graydark-12 hover:text-gray-12 inline-block pb-3 pt-6 transition-colors md:py-3 md:pl-4 md:pr-6"
+          href="/"
+          >Home</a
+        >
+      </li>
+      <li>
+        <a
+          class="text-gray-11 dark:text-graydark-11 dark:hover:text-graydark-12 hover:text-gray-12 inline-block py-3 transition-colors md:px-6 md:py-3"
+          href="/#features"
+          >Features</a
+        >
+      </li>
+      <li>
+        <a
+          class="text-gray-11 dark:text-graydark-11 dark:hover:text-graydark-12 hover:text-gray-12 inline-block py-3 transition-colors md:px-6 md:py-3"
+          href="/#mission"
+          >Mission</a
+        >
+      </li>
+      <li>
+        <a
+          class="text-gray-11 dark:text-graydark-11 dark:hover:text-graydark-12 hover:text-gray-12 inline-block pb-2 pt-3 transition-colors md:py-3 md:pl-6 md:pr-4"
+          href="/#faq"
+          >FAQ</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://discord.gg/SERySfj8Eg"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-gray-11 dark:text-graydark-11 dark:hover:text-graydark-12 hover:text-gray-12 inline-block pb-2 pt-3 transition-colors md:py-3 md:pl-6 md:pr-4"
+          >Discord</a
+        >
+      </li>
+    </ul>
+    <div class="mx-20 max-w-screen-2xl">
+      <header class="flex flex-col bg-customGray rounded-xl my-10 relative">
         <div>
           <h1 class="text-3xl font-bold underline pt-6 text-center">
             <span class="text-indigo-700">Blogos</span>47's blog
           </h1>
-          <h2 class="text-xl text-center pb-6">Coding, and more</h2>
+          <h2 class="text-xl text-center mb-5">Coding, and more</h2>
         </div>
         <div
-          class="flex flex-row mb-5 justify-center items-center [&>a]:w-5 space-x-1 filter"
+          class="flex flex-row justify-center items-center [&>a]:w-5 space-x-1 filter absolute top-4 right-4"
         >
           <a
             href="https://twitter.com/blogos47"
@@ -66,13 +112,13 @@
             <img src="https://img.icons8.com/fluent/48/000000/tiktok.png" />
           </a>
           <!-- <a
-            href="https://youtube.com/blogos47"
-            class="grayscale hover:grayscale-0"
-          >
-            <img
-              src="https://img.icons8.com/fluent/48/000000/youtube-play.png"
-            />
-          </a> -->
+                href="https://youtube.com/blogos47"
+                class="grayscale hover:grayscale-0"
+            >
+                <img
+                src="https://img.icons8.com/fluent/48/000000/youtube-play.png"
+                />
+            </a> -->
           <a
             href="https://github.com/blogos47"
             class="grayscale hover:grayscale-0"
@@ -88,15 +134,29 @@
           >
             Instalando Django en Windows Subsystem for Linux, Ubuntu
           </h2>
-          <date
-            class="text-center right block text-white bg-customGray rounded-xl px-5 my-5 badge badge-outline"
-            >2023-14-10</date
-          >
-          <span class="badge badge-primary">python</span>
-          <span class="badge badge-primary">django</span>
-          <span class="badge badge-primary">backend</span>
 
-          <div>
+          <div class="mt-5">
+            <date
+              class="text-center right inline-block text-white bg-customGray rounded-xl px-5 mb-5 mt-1 badge badge-outline"
+              >2023-14-10</date
+            >
+            <span
+              class="text-center right inline-block text-white bg-customGray rounded-xl px-5 mb-5 mt-1 badge badge-outline"
+              >python</span
+            >
+            <span
+              class="text-center right inline-block text-white bg-customGray rounded-xl px-5 mb-5 mt-1 badge badge-outline"
+              >django</span
+            >
+            <span
+              class="text-center right inline-block text-white bg-customGray rounded-xl px-5 mb-5 mt-1 badge badge-outline"
+              >backend</span
+            >
+          </div>
+          <section class="mb-10 bg-customGray rounded-xl text-wrap-balanced">
+            <img src="p1.png" alt="" class="m-5 rounded-xl mx-auto" />
+          </section>
+          <div class="pb-5 bg-customGray rounded-xl text-wrap-balanced">
             <button
               id="copyButton"
               class="relative float-right top-8 right-10 bg-customGray hover:bg-indigo-950 text-white font-bold py-2 px-4 rounded"
@@ -106,7 +166,7 @@
             </button>
 
             <pre class="text-left">
-                <code id="codeBlock">
+                <code id="codeBlock" class="z-10">
 # Navegar a la ubicación de la carpeta deseada
 cd ~/ruta/delproyecto
 
@@ -138,6 +198,31 @@ python3 manage.py runserver
         </article>
       </main>
     </div>
+    <svg
+      class="absolute -bottom-[15%] w-full -z-10"
+      viewBox="0 0 1919 377"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M0 368.265L35.6081 355.891C71.003 343.305 142.219 318.558 213.222 309.171C284.225 299.998 355.441 306.398 426.444 303.625C497.447 300.638 568.664 288.691 639.667 302.131C710.67 315.571 781.886 354.825 852.889 353.331C923.892 351.838 995.108 310.025 1066.11 290.398C1137.11 270.771 1208.33 273.758 1279.33 295.731C1350.34 317.705 1421.55 359.091 1492.56 371.891C1563.56 384.691 1634.77 368.905 1705.78 364.425C1776.78 359.731 1848 366.131 1883.39 369.331L1919 372.531V176.265H1883.39C1848 176.265 1776.78 176.265 1705.78 176.265C1634.77 176.265 1563.56 176.265 1492.56 176.265C1421.55 176.265 1350.34 176.265 1279.33 176.265C1208.33 176.265 1137.11 176.265 1066.11 176.265C995.108 176.265 923.892 176.265 852.889 176.265C781.886 176.265 710.67 176.265 639.667 176.265C568.664 176.265 497.447 176.265 426.444 176.265C355.441 176.265 284.225 176.265 213.222 176.265C142.219 176.265 71.003 176.265 35.6081 176.265H0V368.265Z"
+        fill="#4805FF"
+        data-darkreader-inline-fill=""
+        style="--darkreader-inline-fill: #14132b"
+      ></path>
+      <path
+        d="M0 8.53113L35.6081 20.9044C71.003 33.4911 142.219 58.2378 213.222 67.6245C284.225 76.7978 355.441 70.3978 426.444 73.1711C497.447 76.1578 568.664 88.1045 639.667 74.6645C710.67 61.2245 781.886 21.9711 852.889 23.4645C923.892 24.9578 995.108 66.7711 1066.11 86.3978C1137.11 106.024 1208.33 103.038 1279.33 81.0645C1350.34 59.0911 1421.55 17.7044 1492.56 4.90444C1563.56 -7.89556 1634.77 7.8911 1705.78 12.3711C1776.78 17.0644 1848 10.6645 1883.39 7.46446L1919 4.26446V200.531H1883.39C1848 200.531 1776.78 200.531 1705.78 200.531C1634.77 200.531 1563.56 200.531 1492.56 200.531C1421.55 200.531 1350.34 200.531 1279.33 200.531C1208.33 200.531 1137.11 200.531 1066.11 200.531C995.108 200.531 923.892 200.531 852.889 200.531C781.886 200.531 710.67 200.531 639.667 200.531C568.664 200.531 497.447 200.531 426.444 200.531C355.441 200.531 284.225 200.531 213.222 200.531C142.219 200.531 71.003 200.531 35.6081 200.531H0V8.53113Z"
+        fill="#14132B"
+        data-darkreader-inline-fill=""
+        style="--darkreader-inline-fill: #14132b"
+      ></path>
+      <path
+        d="M0 145.064L35.6081 140.158C71.003 135.038 142.219 125.224 213.222 124.798C284.225 124.371 355.441 133.758 426.444 135.464C497.447 137.171 568.664 131.624 639.667 121.598C710.67 111.571 781.886 97.4912 852.889 87.8912C923.892 78.2912 995.108 73.1712 1066.11 77.2245C1137.11 81.0645 1208.33 93.8645 1279.33 101.758C1350.34 109.438 1421.55 112.424 1492.56 113.704C1563.56 115.198 1634.77 115.198 1705.78 119.891C1776.78 124.371 1848 133.758 1883.39 138.238L1919 142.931V200.531H1883.39C1848 200.531 1776.78 200.531 1705.78 200.531C1634.77 200.531 1563.56 200.531 1492.56 200.531C1421.55 200.531 1350.34 200.531 1279.33 200.531C1208.33 200.531 1137.11 200.531 1066.11 200.531C995.108 200.531 923.892 200.531 852.889 200.531C781.886 200.531 710.67 200.531 639.667 200.531C568.664 200.531 497.447 200.531 426.444 200.531C355.441 200.531 284.225 200.531 213.222 200.531C142.219 200.531 71.003 200.531 35.6081 200.531H0V145.064Z"
+        fill="#714FE3"
+        data-darkreader-inline-fill=""
+        style="--darkreader-inline-fill: #9e2958"
+      ></path>
+    </svg>
     <script>
       function copyToClipboard() {
         // Obtén el texto del bloque de código
