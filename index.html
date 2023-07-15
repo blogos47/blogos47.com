@@ -22,104 +22,122 @@
         },
       };
     </script>
+    <style>
+      :root {
+        background-color: transparent;
+      }
+      .text-wrap-balanced {
+        text-wrap: balance;
+      }
+    </style>
   </head>
   <body
-    class="bg-gradient-to-b from-black via-neutral-950 to-indigo-950 h-auto text-white font-sans"
+    class="h-auto text-white font-sans bg-gradient-to-b from-black via-neutral-950 to-indigo-950"
   >
-    <header class="flex flex-col bg-customGray rounded-xl m-10">
-      <div>
-        <h1 class="text-3xl font-bold underline pt-6 text-center">
-          Blogos47's blog
-        </h1>
-        <h2 class="text-xl text-center pb-6">Coding, and more</h2>
-      </div>
-      <div
-        class="flex flex-row m-10 justify-center items-center [&>a]:w-5 space-x-1 filter"
-      >
-        <a
-          href="https://twitter.com/blogos47"
-          class="grayscale hover:grayscale-0"
-        >
-          <img src="https://img.icons8.com/fluent/48/000000/twitter.png" />
-        </a>
-        <a
-          href="https://instagram.com/blogos47"
-          class="grayscale hover:grayscale-0"
-        >
-          <img
-            src="https://img.icons8.com/fluent/48/000000/instagram-new.png"
-          />
-        </a>
-        <a
-          href="https://tiktok.com/@blogos47"
-          class="grayscale hover:grayscale-0"
-        >
-          <img src="https://img.icons8.com/fluent/48/000000/tiktok.png" />
-        </a>
-        <a
-          href="https://youtube.com/blogos47"
-          class="grayscale hover:grayscale-0"
-        >
-          <img src="https://img.icons8.com/fluent/48/000000/youtube-play.png" />
-        </a>
-        <a
-          href="https://github.com/blogos47"
-          class="grayscale hover:grayscale-0"
-        >
-          <img src="https://img.icons8.com/fluent/48/000000/github.png" />
-        </a>
-      </div>
-    </header>
-    <main class="flex flex-col">
-      <article class="flex flex-col">
-        <h2 class="text-3xl text-center py-5 bg-customGray rounded-xl mx-10">
-          Instalando Django en Windows Subsystem for Linux, Ubuntu
-        </h2>
-        <date class="text-center text-white bg-customGray rounded-xl mx-10 my-5"
-          >2023-14-10</date
-        >
-
+    <div class="mx-20">
+      <header class="flex flex-col bg-customGray rounded-xl my-10 -p-2">
         <div>
-          <button
-            id="copyButton"
-            class="relative float-right top-8 right-10 bg-customGray hover:bg-indigo-950 text-white font-bold py-2 px-4 rounded"
-            onclick="copyToClipboard()"
-          >
-            Copy
-          </button>
-          <pre class="text-left overflow-x-auto">
-                    <code id="codeBlock">
-                    # Navegar a la ubicación de la carpeta deseada
-                    cd ~/ruta/delproyecto
-
-                    # Crear un entorno virtual
-                    python3 -m venv venv
-
-                    # Activar el entorno virtual
-                    source myenv/bin/activate
-
-                    # Instalar Django si no está instalado
-                    pip install django
-
-                    # Crear los archivos de configuración del proyecto
-                    django-admin startproject myproject .
-
-                    # Realizar las configuraciones necesarias en settings.py
-
-                    # Ejecutar las migraciones iniciales
-                    python3 manage.py migrate
-
-                    # Crear un superusuario
-                    python3 manage.py createsuperuser
-
-                    # Iniciar el servidor de desarrollo de Django
-                    python3 manage.py runserver
-                    </code>
-                </pre>
+          <h1 class="text-3xl font-bold underline pt-6 text-center">
+            <span class="text-indigo-700">Blogos</span>47's blog
+          </h1>
+          <h2 class="text-xl text-center pb-6">Coding, and more</h2>
         </div>
-      </article>
-    </main>
+        <div
+          class="flex flex-row mb-5 justify-center items-center [&>a]:w-5 space-x-1 filter"
+        >
+          <a
+            href="https://twitter.com/blogos47"
+            class="grayscale hover:grayscale-0"
+          >
+            <img src="https://img.icons8.com/fluent/48/000000/twitter.png" />
+          </a>
+          <a
+            href="https://instagram.com/blogos47"
+            class="grayscale hover:grayscale-0"
+          >
+            <img
+              src="https://img.icons8.com/fluent/48/000000/instagram-new.png"
+            />
+          </a>
+          <a
+            href="https://tiktok.com/@blogos47"
+            class="grayscale hover:grayscale-0"
+          >
+            <img src="https://img.icons8.com/fluent/48/000000/tiktok.png" />
+          </a>
+          <!-- <a
+            href="https://youtube.com/blogos47"
+            class="grayscale hover:grayscale-0"
+          >
+            <img
+              src="https://img.icons8.com/fluent/48/000000/youtube-play.png"
+            />
+          </a> -->
+          <a
+            href="https://github.com/blogos47"
+            class="grayscale hover:grayscale-0"
+          >
+            <img src="https://img.icons8.com/fluent/48/000000/github.png" />
+          </a>
+        </div>
+      </header>
+      <main class="flex flex-col">
+        <article class="flex flex-col">
+          <h2
+            class="text-3xl text-center p-5 bg-customGray rounded-xl text-wrap-balanced"
+          >
+            Instalando Django en Windows Subsystem for Linux, Ubuntu
+          </h2>
+          <date
+            class="text-center right block text-white bg-customGray rounded-xl px-5 my-5 badge badge-outline"
+            >2023-14-10</date
+          >
+          <span class="badge badge-primary">python</span>
+          <span class="badge badge-primary">django</span>
+          <span class="badge badge-primary">backend</span>
 
+          <div>
+            <button
+              id="copyButton"
+              class="relative float-right top-8 right-10 bg-customGray hover:bg-indigo-950 text-white font-bold py-2 px-4 rounded"
+              onclick="copyToClipboard()"
+            >
+              Copy
+            </button>
+
+            <pre class="text-left">
+                <code id="codeBlock">
+# Navegar a la ubicación de la carpeta deseada
+cd ~/ruta/delproyecto
+
+# Crear un entorno virtual
+python3 -m venv venv
+
+# Activar el entorno virtual
+source myenv/bin/activate
+
+# Instalar Django si no está instalado
+pip install django
+
+# Crear los archivos de configuración del proyecto
+django-admin startproject myproject .
+
+# Realizar las configuraciones necesarias en settings.py
+
+# Ejecutar las migraciones iniciales
+python3 manage.py migrate
+
+# Crear un superusuario
+python3 manage.py createsuperuser
+
+# Iniciar el servidor de desarrollo de Django
+python3 manage.py runserver
+                </code>
+            </pre>
+          </div>
+        </article>
+      </main>
+    </div>
     <script>
       function copyToClipboard() {
         // Obtén el texto del bloque de código
